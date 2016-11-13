@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/angular": "^1.5.19",
+    "@types/lodash": "^4.14.38",
     "browserify": "^13.1.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.2",
@@ -17,5 +19,9 @@
     "typescript": "^2.0.9",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "lodash": "^4.16.6"
   }
 }

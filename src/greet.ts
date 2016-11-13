@@ -1,5 +1,8 @@
 export function sayHello(name: string) {
-    return `Hello from ${name}`;
+    return `Hello ${name}`;
 }
 
-// export { sayHello };
+
+export function sayBye(name: string) {
+    return `Goodbye ${name}`;
+}

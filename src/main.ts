@@ -1,8 +1,8 @@
-import { sayHello } from "./greet";
+import * as angular from 'angular';
+import * as _ from 'lodash'
 
-function showHello(divName: string, name: string) {
-    const elt = document.getElementById(divName);
-    elt.innerText = sayHello(name);
-}
+import { homeComponent } from './home/home-component'
 
-showHello("greeting", "TypeScript");
+let myApp = angular.module('myApp', []);
+
+myApp.component('home', homeComponent);
