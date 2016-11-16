@@ -1,9 +1,9 @@
 function homeController(){
     let vm = this;
-    vm.name = 'misha';
+    vm.name = 'mike';
 }
 
 export let homeComponent: angular.IComponentOptions = {
     controller: homeController,
-    template: '<h1>Home Component: {{$ctrl.name}} !!!</h1>'
+    template: '<h1>Hello {{$ctrl.name}} !!!</h1>'
 };

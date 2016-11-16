@@ -1,8 +1,5 @@
 import * as angular from 'angular';
 import * as _ from 'lodash'
+import home from './home/home.module';
 
-import { homeComponent } from './home/home-component'
-
-let myApp = angular.module('myApp', []);
-
-myApp.component('home', homeComponent);
+let myApp = angular.module('myApp', [home]);
