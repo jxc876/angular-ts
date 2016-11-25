@@ -1,7 +1,7 @@
 import * as angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import * as uiRouter from 'angular-ui-router';
 
-let myApp = angular.module('myApp', [uiRouter]);
+let myApp = angular.module('myApp', ['ui.router']);
 
 myApp.config(function($stateProvider) {
   let homeState = {
