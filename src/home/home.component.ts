@@ -1,6 +1,6 @@
 function homeController(){
     let vm = this;
-    vm.name = 'mike';
+    vm.name = 'world';
 }
 
 export let homeComponent: angular.IComponentOptions = {
