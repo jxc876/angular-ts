@@ -1,4 +1,5 @@
 import * as angular from 'angular';
-import home from './home/home.module';
+import { homeComponent } from './home/home.component'
 
-let myApp = angular.module('myApp', [home]);
+angular.module('myApp', [])
+    .component('home', homeComponent);
