@@ -1,0 +1,10 @@
+<form name="registerForm" class="form-signin">
+  <h2 class="form-signin-heading">Register</h2>
+  <input name="usernameInput" type="text" class="form-control" placeholder="UserName" required autofocus data-ng-model="username">
+  <input name="emailInput" type="email" class="form-control" placeholder="Email address" required autofocus data-ng-model="email">
+  <input name="passwordInput" type="password" class="form-control" placeholder="Password" required data-ng-model="password">
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+  <a class="btn btn-lg btn-default btn-block" href="#/login">Cancel</a>
+  
+  <p class="text-danger">{{message}}</p>
+</form>

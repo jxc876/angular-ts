@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <title>Hello World!</title>
+        <link rel="stylesheet" href="app.css">
     </head>
     <body ng-app="myApp" class="container">
         <ul class="nav nav-pills">
             <li role="presentation" ui-sref-active="active"><a ui-sref="home">Home</a></li>
             <li role="presentation" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-            <li role="presentation" ui-sref-active="active"><a href="#">Register</a></li>
+            <li role="presentation" ui-sref-active="active"><a ui-sref="register">Register</a></li>
         </ul>
-
         <ui-view></ui-view>
         <script src="../dist/bundle.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

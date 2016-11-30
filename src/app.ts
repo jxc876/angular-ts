@@ -4,8 +4,10 @@ import { IState } from 'angular-ui-router';
 
 import { homeModule } from './home/home.module';
 import { loginModule } from './login/login.module';
+import { registerModule } from './register/register.module';
 
-let myApp = angular.module('myApp', ['ui.router', homeModule, loginModule]);
+const appDependencies = ['ui.router', homeModule, loginModule, registerModule];
+let myApp = angular.module('myApp', appDependencies);
 
 myApp.config(function($stateProvider) {
   const homeState: IState = {
@@ -21,4 +23,11 @@ myApp.config(function($stateProvider) {
     template: '<login></login>'
   }
   $stateProvider.state(loginState);
+
+  const registerState: IState = {
+    name: 'register',
+    url: '/register',
+    template: '<register></register>'
+  }
+  $stateProvider.state(registerState);
 });
