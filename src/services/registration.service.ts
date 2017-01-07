@@ -5,7 +5,6 @@ interface RegistrationResponse {
 }
 
 interface IRegistrationService extends resource.IResource<RegistrationResponse> {
-    message: string
 }
 
 export interface RegistrationResource extends resource.IResourceClass<IRegistrationService> {
