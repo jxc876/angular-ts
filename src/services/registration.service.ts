@@ -1,4 +1,5 @@
 import { resource } from 'angular';
+import { API_URL } from './config'
 
 interface RegistrationResponse {
     message: string
@@ -11,7 +12,7 @@ export interface RegistrationResource extends resource.IResourceClass<IRegistrat
 }
 
 export function registrationService($resource: resource.IResourceService){
-    const URL: string = 'http://localhost:9292/api/register';
+    const URL: string = `{API_URL}/register`;
     const PARAM_DEFAULTS = {};
     const ACTIONS = {};
     const OPTIONS = {};
