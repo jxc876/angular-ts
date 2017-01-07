@@ -1,8 +1,9 @@
-function loginController(){
-    let vm = this;
+class LoginController {
+    constructor(){
+    }
 }
 
 export let loginComponent: angular.IComponentOptions = {
-    controller: loginController,
+    controller: LoginController,
     templateUrl: 'login/login.html'
 };
