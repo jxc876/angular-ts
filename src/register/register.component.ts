@@ -1,19 +1,31 @@
-function registerController(registrationService, $scope){
-    let vm = this;
-    vm.register = register;
-    vm.isFormSubmitted = false;
-    vm.isRegisterSuccess = false;
+import * as angular from 'angular';
+import { RegistrationResource } from '../services/registration.service'
 
-    function register(){
-        vm.isFormSubmitted = true;
-        registrationService
-            .save({ username: vm.username, password: vm.password }).$promise
+class RegisterController {
+    username: string;
+    password: string;
+    isFormSubmitted: boolean;
+    isRegisterSuccess: boolean;
+    registrationService: RegistrationResource;
+
+    constructor(registrationService){
+        this.username = '';
+        this.password = '';
+        this.isFormSubmitted = false;
+        this.isRegisterSuccess = false;
+        this.registrationService = registrationService;
+    }
+
+    register(){
+        this.isFormSubmitted = true;
+        this.registrationService
+            .save({ username: this.username, password: this.password }).$promise
             .then(response => this.isRegisterSuccess = true)
             .catch(response => this.isRegisterSuccess = false);
     }
 }
 
 export let registerComponent: angular.IComponentOptions = {
-    controller: registerController,
+    controller: RegisterController,
     templateUrl: 'register/register.html'
 };
