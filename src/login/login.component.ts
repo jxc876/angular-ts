@@ -1,5 +1,18 @@
+import { LoginResource } from '../services/login.service'
+
 class LoginController {
-    constructor(){
+    username: string;
+    password: string;
+
+    constructor(private loginService: LoginResource){
+        this.username = '';
+        this.password = '';
+    }
+
+    login(){
+        this.loginService
+            .save({ username: this.username, password: this.password }).$promise
+            .then(response => { console.log(response.token) });
     }
 }
 

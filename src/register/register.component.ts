@@ -7,7 +7,7 @@ class RegisterController {
     isFormSubmitted: boolean;
     isRegisterSuccess: boolean;
 
-    constructor(private registrationService){
+    constructor(private registrationService: RegistrationResource){
         this.username = '';
         this.password = '';
         this.isFormSubmitted = false;
